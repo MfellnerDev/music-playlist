@@ -24,6 +24,20 @@ public class Musikstueck {
     }
 
     /**
+     * Konstruktor - Mit allen Default Werten im Parameter
+     *
+     * @param titel der Titel des Musikstücks
+     * @param interpret der interpret bzw ersteller des Lieds
+     * @param laenge die Länge des stücks in sekunden
+     */
+    public Musikstueck(String titel, String interpret, int laenge)    {
+        if (titel != null && interpret != null && laenge > 0)   {
+            this.titel = titel;
+            this.interpret = interpret;
+            this.laenge = laenge;
+        }
+    }
+    /**
      * Formatiert die Dauer des Musikstücks (Sekunden) im mm:ss Format, dies geschieht mit der
      * sehr praktischen Klasse Duration (Src: https://www.baeldung.com/java-period-duration)
      *
@@ -42,7 +56,7 @@ public class Musikstueck {
     /**
      * setter-Methode für this.titel, der titel darf nicht null sein.
      *
-     * @param titel, der Titel des Liedes
+     * @param titel der Titel des Liedes
      */
     public void setTitel(String titel) {
         if (titel != null) {
@@ -53,7 +67,7 @@ public class Musikstueck {
     /**
      * setter-Methode für this.interpret, der Interpret darf nicht null sein.
      *
-     * @param interpret, der Interpret (also Ersteller des Liedes)
+     * @param interpret der Interpret (also Ersteller des Liedes)
      */
     public void setInterpret(String interpret) {
         if (interpret != null) {
@@ -64,7 +78,7 @@ public class Musikstueck {
     /**
      * setter-Methode für this.laenge, die Länge des Liedes darf nicht kleiner als 0 sein
      *
-     * @param laenge, die Länge des Liedes in sekunden
+     * @param laenge die Länge des Liedes in sekunden
      */
     public void setLaenge(int laenge) {
         if (laenge > 0) {

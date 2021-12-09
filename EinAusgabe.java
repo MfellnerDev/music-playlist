@@ -11,21 +11,21 @@ public class EinAusgabe {
         System.out.println("------------------------------------");
         /* Test-Objekt 1*/
         Musikstueck test1 = new Musikstueck();
-        test1.setTitel("In meinem Benz");
-        test1.setInterpret("AK AUSSERKONTROLLE, Bonez MC");
-        test1.setLaenge(146);
+        test1.setTitel("Suicide Note");
+        test1.setInterpret("Prodavery, libenz");
+        test1.setLaenge(140);
 
         /* Test-Obbjekt 2*/
         Musikstueck test2 = new Musikstueck();
-        test2.setTitel("Yummy");
-        test2.setInterpret("Money Boy");
-        test2.setLaenge(196);
+        test2.setTitel("Cradles");
+        test2.setInterpret("Sub Urban");
+        test2.setLaenge(198);
 
         /* Test-Objekt 3*/
         Musikstueck test3 = new Musikstueck();
-        test3.setTitel("Ferrari");
-        test3.setInterpret("Yung Hurn");
-        test3.setLaenge(201);
+        test3.setTitel("Sins");
+        test3.setInterpret("GhostboySadface");
+        test3.setLaenge(128);
 
         System.out.println(" Test: getter-Methoden: ");
 

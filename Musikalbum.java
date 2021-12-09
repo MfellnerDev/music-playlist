@@ -16,9 +16,9 @@ public class Musikalbum {
     /**
      * Konstruktor - Erstellt ein Musikalbum und setzt die "meta-daten" fest
      *
-     * @param albumTitel, der Titel des Albums, String
-     * @param albumInterpret, der Interpret, also Ersteller des Albums, String
-     * @param anzahlMusikstuecke, anzahl der Musikstücke die in dem Album (Musikstuecke-Array) gespeichert werden, byte
+     * @param albumTitel der Titel des Albums, String
+     * @param albumInterpret der Interpret, also Ersteller des Albums, String
+     * @param anzahlMusikstuecke anzahl der Musikstücke die in dem Album (Musikstuecke-Array) gespeichert werden, byte
      */
     public Musikalbum(String albumTitel, String albumInterpret, byte anzahlMusikstuecke)    {
         if (albumTitel != null && albumInterpret != null && anzahlMusikstuecke > 0) {
@@ -31,7 +31,7 @@ public class Musikalbum {
     /**
      * setter-Methode für this.albumName
      *
-     * @param albumName, der Name des Albums, String
+     * @param albumName der Name des Albums, String
      */
     public void setAlbumName(String albumName)  {
         if (albumName != null)  {
@@ -42,7 +42,7 @@ public class Musikalbum {
     /**
      * setter-Methode für this.albumInterpret
      *
-     * @param albumInterpret, der Interpret (Ersteller) des Albums, String
+     * @param albumInterpret der Interpret (Ersteller) des Albums, String
      */
     public void setAlbumInterpret(String albumInterpret)    {
         if (albumInterpret != null) {
@@ -53,7 +53,7 @@ public class Musikalbum {
     /**
      * setter-Methode für die Anzahl der Musikstuecke, erstellt aber ein neues Array (!)
      *
-     * @param musikstuecke, anzahl der Musikstuecke (Array-Elemente), byte
+     * @param musikstuecke anzahl der Musikstuecke (Array-Elemente), byte
      */
     public void setAnzahllMusikstuecke(byte musikstuecke)  {
         if (musikstuecke > 0) {
@@ -91,7 +91,7 @@ public class Musikalbum {
     /**
      * Platziert ein Musikstück-Objekt an der ersten freien Stelle im Array
      *
-     * @param m, das zu platzierende Musikstueck-Objekt, Musikstueck
+     * @param m das zu platzierende Musikstueck-Objekt, Musikstueck
      * @return true -> wenn das platzieren erfolgreich war (es war noch ein platz frei)
      *         false -> wenn das platzieren nicht erfolgreich war (kein freier Platz)
      */
@@ -108,18 +108,20 @@ public class Musikalbum {
     /**
      * addMusikstueck überladen, und dass man das Musikstück mit Parameter neu erstellen und hinzufügen kann
      *
-     * @param titel, der Titel des Musikstücks, String
-     * @param interpret, der Interpret (Ersteller) des Musikstücks, String
-     * @param dauer, die dauer in sekunden, int
+     * @param titel der Titel des Musikstücks, String
+     * @param interpret der Interpret (Ersteller) des Musikstücks, String
+     * @param dauer die dauer in sekunden, int
+     *
+     * @return boolean
      */
     public boolean addMusikstueck(String titel, String interpret, int dauer)    {
-        Musikstueck mNew = new Musikstueck();
+        Musikstueck mnew = new Musikstueck();
         if (titel != null && interpret != null && dauer > 0) {
-            mNew.setTitel(titel);
-            mNew.setInterpret(interpret);
-            mNew.setLaenge(dauer);
+            mnew.setTitel(titel);
+            mnew.setInterpret(interpret);
+            mnew.setLaenge(dauer);
         }
-        return this.addMusikstueck(mNew);
+        return this.addMusikstueck(mnew);
     }
 
     /**
@@ -156,6 +158,8 @@ public class Musikalbum {
 
     /**
      * Entfernt ein Musikstück von einer bestimmtem stelle
+     *
+     * @param nummertitel der Titel
      * @return true -> wenn der Wert vorher nicht == null war (das Löschen war sinnvoll) und
      *         false -> wenn der Wert vorher == null war, das löschen war sinnlos
      */

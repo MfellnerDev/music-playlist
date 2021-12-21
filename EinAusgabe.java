@@ -1,5 +1,4 @@
 package m3b2_Musikstücke;
-
 /**
  * EinAusgabe - Test-Klasse für Musikstueck.java und Musikalbum (siehe UML)
  * @author Manuel Fellner
@@ -28,6 +27,7 @@ public class EinAusgabe {
         test3.setLaenge(128);
 
         System.out.println(" Test: getter-Methoden: ");
+
 
         System.out.println(" Objekt test1: ");
         System.out.println(" getTitel() : ");
@@ -84,6 +84,7 @@ public class EinAusgabe {
         System.out.println("------------------------------------");
 
         System.out.println("------------------------------------");
+
 
     }
 }
